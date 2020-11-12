@@ -7,4 +7,21 @@
     android:background="@drawable/gradient_bg"
     tools:context=".trivia">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:text="Quizzy"
+        android:textColor="#3A72E2"
+        android:textSize="76sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
