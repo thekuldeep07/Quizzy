@@ -15,13 +15,12 @@ import org.json.JSONException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.content.ContentValues.TAG;
-
 public class QuestionBank {
 
     ArrayList<Question> questionArrayList = new ArrayList<>();
-    private String url = "https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json";
-    public List<Question> getQuestions(){
+    private String url = " https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json\n" +
+            "\n";
+    public List<Question> getQuestions(final AnswerListAsyncResponse callback){
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -31,14 +30,23 @@ public class QuestionBank {
                     @Override
                     public void onResponse(JSONArray response) {
 
-                        for (int i =0 ;i<response.length();i++){
+                        for(int i =0; i< response.length();i++){
                             try {
-                                Log.d("array",""+response.getJSONArray(i).get(0));
+                                Question question = new Question();
+                                question.setAnswer(response.getJSONArray(i).get(0).toString());
+                                question.setAnswerTrue(response.getJSONArray(i).getBoolean(1));
+
+                                questionArrayList.add(question);
+                                //Log.d("question tAG ",""+response.getJSONArray(i).get(0));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         }
 
+                        if(null != callback)
+                        {
+                            callback.processFinished(questionArrayList);
+                        }
 
                     }
                 }, new Response.ErrorListener() {
@@ -49,9 +57,9 @@ public class QuestionBank {
         }
 
         );
-        AppController.getInstance().addToRequestQueue(jsonArrayRequest);
 
-        return null;
+        AppController.getInstance().addToRequestQueue(jsonArrayRequest);
+        return questionArrayList;
     }
 
 
