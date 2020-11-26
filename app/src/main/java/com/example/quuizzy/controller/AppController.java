@@ -22,8 +22,13 @@ public class AppController extends Application{
         super.onCreate();
         mInstance = this;
     }
-    public static synchronized AppController getInstance() {
+    public static synchronized AppController getInstance()
+    {
         return mInstance;
+    }
+
+    public  void setConnectivityListener(ConnectivityReciever.ConnectivityReceiverListener listener){
+        ConnectivityReciever.connectivityRecieverListener = listener;
     }
 
     public RequestQueue getRequestQueue() {

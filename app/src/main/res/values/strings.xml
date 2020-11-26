@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Quuizzy</string>
+    <string name="quizzy">QUIZZY</string>
+    <string name="go"><![CDATA[GO->]]></string>
+    <string name="go1"><![CDATA[Go->]]></string>
+    <string name="go2">Go</string>
     <string name="truetext">True</string>
     <string name="falsetext">False</string>
     <string name="counter_question">0 Out of 100</string>
+    <string name="get_started">Get Started</string>
 </resources>

@@ -3,13 +3,24 @@ package com.example.quuizzy.model;
 public class Question {
     private String answer;
     private boolean answerTrue;
+    private  int code ;
 
-    public Question(String answer, boolean answerTrue) {
+    public Question(String answer, boolean answerTrue,int code) {
         this.answer = answer;
         this.answerTrue = answerTrue;
+        this.code = code;
+
     }
 
     public Question() {
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getAnswer() {

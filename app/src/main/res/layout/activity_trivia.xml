@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
+    android:background="@color/black"
     tools:context=".trivia">
 
     <ImageView
@@ -66,7 +66,7 @@
             android:id="@+id/prevButton"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="#3A72E2"
             app:srcCompat="@android:drawable/ic_media_previous" />
 
         <Button
@@ -75,7 +75,7 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="#3A72E2"
             android:text="@string/truetext" />
 
         <Button
@@ -84,14 +84,14 @@
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="#3A72E2"
             android:text="@string/falsetext" />
 
         <ImageButton
             android:id="@+id/nextButton"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#E91E63"
+            android:backgroundTint="#3A72E2"
             app:srcCompat="@android:drawable/ic_media_next" />
 
 
@@ -104,7 +104,7 @@
         android:layout_marginTop="244dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/counter_question"
-        android:textColor="#0C0C0C"
+        android:textColor="#FFF9F9"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -121,7 +121,7 @@
         android:layout_marginBottom="44dp"
         android:fontFamily="sans-serif-black"
         android:text="Current Score = 0"
-        android:textColor="#070707"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -138,7 +138,7 @@
         android:layout_marginBottom="12dp"
         android:fontFamily="sans-serif-black"
         android:text="High Score = 0"
-        android:textColor="#070707"
+        android:textColor="#FFFAFA"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
