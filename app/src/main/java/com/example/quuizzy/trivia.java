@@ -209,7 +209,7 @@ public class trivia extends AppCompatActivity implements View.OnClickListener, C
     private void fade_animation() {
         final CardView cardView = findViewById(R.id.cardView);
         AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f,0.0f);
-        alphaAnimation.setDuration(350);
+        alphaAnimation.setDuration(850);
         alphaAnimation.setRepeatCount(1);
         alphaAnimation.setRepeatMode(Animation.REVERSE);
 

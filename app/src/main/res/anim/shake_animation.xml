@@ -7,5 +7,5 @@
     android:repeatCount="1"
     android:repeatMode="reverse"
     android:toDegrees="10"
-    android:duration="150"
+    android:duration="850"
     />
